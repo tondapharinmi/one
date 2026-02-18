@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ONE·一个 阅读 SDK Demo</title>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script src="../sdk/one-reader-sdk.js"></script>
+<script>
+  const container = document.getElementById("app");
+  const sdk = new OneReaderSDK(container);
+
+  const article = {
+    title: "每日一篇 · 示例文章",
+    author: "示例作者",
+    content: "这是一个模拟的 ONE·一个 阅读内容展示示例。<br/><br/>    该 SDK 主要用于展示内容渲染结构与基础阅读排版逻辑。<br/><br/>    可扩展功能包括：夜间模式、字体调节、分页加载等。"
+  };
+
+  sdk.renderArticle(article);
+</script>
+
+</body>
+</html>
